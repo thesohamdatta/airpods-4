@@ -1,23 +1,14 @@
 # Issue Tracker
 
-**Type:** Local markdown (transitional — switch to GitHub when a remote is added)
+**Type:** GitHub Issues
 
-## Current setup
+## Setup
 
-- Issues are stored as markdown files under `.scratch/<feature-name>/`
-- Each issue is a single `.md` file
-- The filename serves as the issue title (e.g., `hero-section.md`)
-- Frontmatter is used for metadata: status, labels, assignee
+- Issues are tracked in the repository's GitHub Issues at https://github.com/thesohamdatta/airpods-4/issues
+- The `gh` CLI is used for create/read/update operations
+- External PRs are treated as a triage surface
 
-## Future: GitHub
-
-When a GitHub remote is added, switch to GitHub Issues. The `gh` CLI will be used for create/read/update operations.
-
-## PRs as a request surface
-
-External PRs should also be treated as a triage surface (once GitHub is configured).
-
-## Label mapping (GitHub-ready)
+## Label mapping
 
 | Role | Label |
 |------|-------|
