@@ -133,7 +133,6 @@ function ProductCard({ product, index }: { product: ProductTile; index: number }
             alt={product.alt}
             fill
             className="object-contain p-6"
-            style={{ width: "auto", height: "auto" }}
             sizes="(max-width: 734px) 100vw, 50vw"
           />
         </div>
@@ -171,8 +170,7 @@ function ProductCard({ product, index }: { product: ProductTile; index: number }
                       alt={f.alt ?? ""}
                       width={20}
                       height={20}
-                      className="object-contain"
-                      style={{ width: "auto", height: "auto" }}
+                      className=""
                     />
                   ) : null}
                 </span>
