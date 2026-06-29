@@ -196,7 +196,7 @@ export function WhyAppleSection() {
 
           <div
             ref={scrollRef}
-            className="flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 -mx-[var(--content-width)/2] px-0 scrollbar-hide"
+            className="flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             onScroll={updateScrollState}
           >

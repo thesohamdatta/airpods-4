@@ -106,7 +106,7 @@ export function WearabilitySection() {
       className="relative h-[200vh] w-full bg-white"
       aria-label="Wearability"
     >
-      <div className="sticky top-0 h-svh overflow-hidden">
+      <div className="sticky top-0 h-screen overflow-hidden">
         <div className="section-container flex flex-col items-center pt-20 pb-12">
           <motion.span
             className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--color-apple-gray-500)]"

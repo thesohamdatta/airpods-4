@@ -92,12 +92,14 @@ export function AudioPerformance() {
     if (!container || !pinned) return;
 
     const ctx = gsap.context(() => {
+      const end = Math.max(0, container.offsetHeight - window.innerHeight);
       ScrollTrigger.create({
         trigger: container,
         start: "top top",
-        end: `+=${container.offsetHeight - window.innerHeight}`,
+        end: `+=${end}`,
         pin: pinned,
         pinSpacing: false,
+        invalidateOnRefresh: true,
       });
     }, container);
 

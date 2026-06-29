@@ -215,6 +215,26 @@ body {
     color: var(--color-apple-black);
   }
 
+  .section-content {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+    padding-left: var(--gap-s);
+    padding-right: var(--gap-s);
+  }
+
+  .headline-xxl {
+    font-size: var(--font-size-section-headline);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+
+  .no-pad-top {
+    padding-top: 0;
+    padding-bottom: var(--section-aap-padding);
+  }
+
   .background-alt {
     background: white;
   }

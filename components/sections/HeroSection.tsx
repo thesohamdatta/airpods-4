@@ -171,7 +171,7 @@ export function HeroSection() {
     <>
       <Navbar />
       <section
-        className="relative w-full h-svh min-h-[600px] overflow-hidden bg-black"
+        className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black"
         aria-label="Hero"
       >
         <div className="absolute inset-0">
