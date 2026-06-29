@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont,
+    "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+:root {
+  --background: #f5f5f7;
+  --foreground: #1d1d1f;
+
+  --color-apple-white: #f5f5f7;
+  --color-apple-black: #1d1d1f;
+  --color-apple-gray-100: #f5f5f7;
+  --color-apple-gray-200: #e8e8ed;
+  --color-apple-gray-300: #d2d2d7;
+  --color-apple-gray-400: #aeaeb2;
+  --color-apple-gray-500: #86868b;
+  --color-apple-gray-600: #6e6e73;
+  --color-apple-gray-700: #424245;
+  --color-apple-gray-800: #333336;
+  --color-apple-gray-900: #1d1d1f;
+  --color-apple-blue: #0071e3;
+  --color-apple-blue-hover: #0077ed;
+  --color-apple-green: #00b04a;
+  --color-apple-orange: #ff9f0a;
+  --color-apple-pink: #ff375f;
+  --color-apple-purple: #bf5af2;
+  --color-apple-red: #ff3b30;
+  --color-apple-yellow: #ffcc00;
+
+  --section-padding: 160px;
+  --section-padding-tablet: 128px;
+  --section-padding-mobile: 96px;
+  --section-aap-padding: 216px;
+  --section-header-bottom: 80px;
+  --section-header-bottom-tablet: 64px;
+  --section-header-bottom-mobile: 48px;
+
+  --content-max-width: 1680px;
+  --content-width: 87.5%;
+
+  --gap-xl: 48px;
+  --gap-l: 32px;
+  --gap-m: 24px;
+  --gap-s: 16px;
+  --gap-xs: 8px;
+  --gap-2xs: 4px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 18px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+
+  --font-size-caption: 0.75rem;
+  --font-size-footnote: 0.8125rem;
+  --font-size-subhead: 0.9375rem;
+  --font-size-body: 1.0625rem;
+  --font-size-callout: 1rem;
+  --font-size-headline: 1.0625rem;
+  --font-size-title3: 1.25rem;
+  --font-size-title2: 1.375rem;
+  --font-size-title1: 1.75rem;
+  --font-size-large-title: 2.125rem;
+  --font-size-hero: 3.5rem;
+  --font-size-section-headline: 3.5rem;
+  --font-size-card-headline: 1.75rem;
+
+  --ease-apple-out: cubic-bezier(0.32, 0.08, 0.24, 1);
+  --ease-apple-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+  --ease-apple-in: cubic-bezier(0.42, 0, 1, 1);
+  --ease-apple-reveal: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-apple-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-apple-micro: cubic-bezier(0.2, 0, 0, 1);
+
+  --duration-micro: 150ms;
+  --duration-standard: 300ms;
+  --duration-emphasis: 400ms;
+  --duration-reveal: 600ms;
+  --duration-hero: 800ms;
+  --duration-stagger: 150ms;
+
+  --blur-sm: 8px;
+  --blur-md: 12px;
+  --blur-lg: 16px;
+  --blur-xl: 20px;
+  --blur-2xl: 26px;
+
+  --glass-surface: rgba(255, 255, 255, 0.12);
+  --glass-surface-dark: rgba(0, 0, 0, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-border-dark: rgba(255, 255, 255, 0.08);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+
+  --scrim-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+
+  --bento-gallery-zoom: 1;
+  --staggered-delay: 0.15;
+  --staggered-opacity-duration: 0.9s;
+  --staggered-translate-y: 30px;
+  --staggered-translate-y-duration: 0.7s;
+}
+
+@media (max-width: 1068px) {
+  :root {
+    --section-padding: 128px;
+    --section-header-bottom: 64px;
+    --font-size-hero: 2.5rem;
+    --font-size-section-headline: 2.5rem;
+  }
+}
+
+@media (max-width: 734px) {
+  :root {
+    --section-padding: 96px;
+    --section-header-bottom: 48px;
+    --font-size-hero: 2rem;
+    --font-size-section-headline: 2rem;
+    --font-size-card-headline: 1.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 64px;
+    --font-size-hero: 1.75rem;
+    --font-size-section-headline: 1.75rem;
+  }
+}
+
+html {
+  height: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--color-apple-blue);
+  color: white;
+}
+
+@layer utilities {
+  .glass {
+    background: var(--glass-surface);
+    backdrop-filter: blur(var(--blur-lg)) saturate(180%);
+    -webkit-backdrop-filter: blur(var(--blur-lg)) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow), var(--glass-highlight);
+  }
+
+  .glass-dark {
+    background: var(--glass-surface-dark);
+    backdrop-filter: blur(var(--blur-xl)) saturate(150%);
+    -webkit-backdrop-filter: blur(var(--blur-xl)) saturate(150%);
+    border: 1px solid var(--glass-border-dark);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .section-container {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+  }
+
+  .section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-aap-padding);
+  }
+
+  .section-padding-no-bottom {
+    padding-top: var(--section-padding);
+    padding-bottom: 0;
+  }
+
+  .theme-dark {
+    color: white;
+  }
+
+  .theme-light {
+    color: var(--color-apple-black);
+  }
+
+  .background-alt {
+    background: white;
+  }
+
+  .gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .glass {
+    background: rgba(24, 24, 27, 0.95);
+    backdrop-filter: none;
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .lenis {
+    scroll-behavior: auto !important;
+  }
+}
