@@ -16,7 +16,7 @@ const slides: Slide[] = [
     id: "case-open",
     images: [
       {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento/bento_case_open__63kccmu775u6_large.jpg",
+        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_case_open__63kccmu775u6_large.jpg",
         alt: "AirPods 4 case open",
       },
     ],
@@ -26,11 +26,11 @@ const slides: Slide[] = [
     id: "stem",
     images: [
       {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento/bento_stem__cfztc9z01vpy_large.jpg",
+        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_stem__cfztc9z01vpy_large.jpg",
         alt: "AirPods 4 stem detail",
       },
       {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento/bento_closeup__nvqogkmqz4ae_large.jpg",
+        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_closeup__nvqogkmqz4ae_large.jpg",
         alt: "AirPods 4 closeup",
       },
     ],
@@ -40,7 +40,7 @@ const slides: Slide[] = [
     id: "case-closed",
     images: [
       {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento/bento_case_close__f0fhueeeoy2q_large.jpg",
+        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_case_close__f0fhueeeoy2q_large.jpg",
         alt: "AirPods 4 case closed",
       },
     ],
@@ -50,11 +50,11 @@ const slides: Slide[] = [
     id: "side",
     images: [
       {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento/bento_side__edtf67wfg10m_large.jpg",
+        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_side__edtf67wfg10m_large.jpg",
         alt: "AirPods 4 side view",
       },
       {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento/bento_angle__b2i7xnzp5h7m_large.jpg",
+        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_angle__b2i7xnzp5h7m_large.jpg",
         alt: "AirPods 4 angle view",
       },
     ],
@@ -125,7 +125,7 @@ export function BentoGallery() {
                 }`}
               >
                 {slide.images.map((img, i) => (
-                  <div key={i} className="relative overflow-hidden rounded-[18px]">
+                  <div key={i} className="relative h-full overflow-hidden rounded-[18px]">
                     <Image
                       src={img.src}
                       alt={img.alt}

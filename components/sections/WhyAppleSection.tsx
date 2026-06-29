@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/animation/ScrollReveal";
 import { StaggeredFadeIn } from "@/components/animation/StaggeredFadeIn";
 
 const CDN_ICON = "https://www.apple.com/v/airpods-4/g/images/overview/icon-card";
-const CDN_ICON_IN = "https://www.apple.com/v/in/airpods-4/images/overview/icon-card";
+const CDN_ICON_IN = "https://www.apple.com/v/airpods-4/g/images/overview/icon-card";
 
 interface CardData {
   title: string;

@@ -151,7 +151,7 @@ export function BatterySection() {
           ref={caseRef}
           className="relative w-full max-w-[400px] aspect-square mt-12"
         >
-          <motion.div style={{ scale: caseScale }} className="w-full h-full">
+          <motion.div style={{ scale: caseScale }} className="relative w-full h-full">
             <Image
               src={CASE_IMAGE}
               alt="AirPods 4 charging case"

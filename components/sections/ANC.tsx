@@ -5,23 +5,24 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { EASING, DURATION } from "@/lib/easing";
 
-const CDN = "https://www.apple.com/v/airpods-4/g/images/overview";
+const CDN = "https://www.apple.com/v/airpods-4/g/images/overview/stories";
+const CDN_CONTRAST = "https://www.apple.com/v/airpods-4/g/images/overview/contrast";
 
 const FEATURES = [
   {
     title: "Adaptive Audio",
     text: "Blends Transparency and Active Noise Cancellation in real time, seamlessly tailoring noise control to your changing environment.",
-    icon: `${CDN}/noise_icon_adaptive__eh8sgult7gae_large.png`,
+    icon: `${CDN_CONTRAST}/noise_icon_adaptive__eh8sgult7gae_large.png`,
   },
   {
     title: "Transparency mode",
     text: "Provides the most natural way to hear the world around you — perfect for staying connected to your surroundings.",
-    icon: `${CDN}/noise_icon_transparency__buvnzqmv27ci_large.png`,
+    icon: `${CDN_CONTRAST}/noise_icon_transparency__buvnzqmv27ci_large.png`,
   },
   {
     title: "Conversation Awareness",
     text: "Senses when you're speaking to someone nearby and automatically lowers the volume of what's playing.",
-    icon: `${CDN}/noise_icon_conversation__ez1oxr48lac2_large.png`,
+    icon: `${CDN_CONTRAST}/noise_icon_conversation__ez1oxr48lac2_large.png`,
   },
 ];
 

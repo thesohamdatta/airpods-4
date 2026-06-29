@@ -8,10 +8,10 @@ import { StaggeredFadeIn } from "@/components/animation/StaggeredFadeIn";
 const CDN_CONTRAST = "https://www.apple.com/v/airpods-4/g/images/overview/contrast";
 
 const AIRPODS_4_CLOSED =
-  "https://www.apple.com/v/airpods-4/g/images/overview/explore/explore_airpods_4_closed__dgo55jp7r7gy_xlarge.jpg";
+  "https://www.apple.com/v/airpods-4/g/images/overview/contrast/explore_airpods_4_closed__dgo55jp7r7gy_xlarge.jpg";
 
 const AIRPODS_4_OPENED =
-  "https://www.apple.com/v/airpods-4/g/images/overview/explore/explore_airpods_4_opened__d1lvsgfc59me_xlarge.jpg";
+  "https://www.apple.com/v/airpods-4/g/images/overview/contrast/explore_airpods_4_opened__d1lvsgfc59me_xlarge.jpg";
 
 interface Feature {
   label: string;
@@ -41,33 +41,33 @@ const products: ProductTile[] = [
       { label: "Adaptive Audio", dash: true },
       {
         label: "Personalised Spatial Audio",
-        icon: `${CDN_CONTRAST}/icon_person_spatialaudio__csfr1qmr43aa_large.png`,
+        icon: `${CDN_CONTRAST}/person_spatialaudio__cabm1tfxfz9e_large.png`,
         alt: "Personalised Spatial Audio",
       },
       {
         label: "H2 chip",
-        icon: `${CDN_CONTRAST}/icon_chip_h2__ej2dk6a2bouq_large.png`,
+        icon: `${CDN_CONTRAST}/chip_h2__eu62bmbnh0wi_large.png`,
         alt: "H2 chip",
       },
       {
         label: "5 hours of listening time",
         value: "Up to 5 hours",
-        icon: `${CDN_CONTRAST}/icon_battery_100percent__ck7x0c9x6z6i_large.png`,
+        icon: `${CDN_CONTRAST}/battery_100percent__6n3pyba2z4im_large.png`,
         alt: "Battery",
       },
       {
         label: "Up to 30 hours total with case",
-        icon: `${CDN_CONTRAST}/icon_battery_100percent__ck7x0c9x6z6i_large.png`,
+        icon: `${CDN_CONTRAST}/battery_100percent__6n3pyba2z4im_large.png`,
         alt: "Total battery with case",
       },
       {
         label: "Charging case",
-        icon: `${CDN_CONTRAST}/icon_airpods_4_chargingcase__dh0m6ot0s9ia_large.png`,
+        icon: `${CDN_CONTRAST}/airpods_4_chargingcase__c4fwrkdadb42_large.png`,
         alt: "Charging case",
       },
       {
         label: "Water resistant",
-        icon: `${CDN_CONTRAST}/icon_drop__bbsjzeali8uq_large.png`,
+        icon: `${CDN_CONTRAST}/drop__d6cji0kw3xg2_large.png`,
         alt: "Water resistant",
       },
     ],
@@ -80,43 +80,43 @@ const products: ProductTile[] = [
     features: [
       {
         label: "Active Noise Cancellation",
-        icon: `${CDN_CONTRAST}/icon_noisecontrol__ezloyxzt4d2u_large.png`,
+        icon: `${CDN_CONTRAST}/contrast_icon_group__f8aob849c2i6_large.png`,
         alt: "Noise control",
       },
       {
         label: "Adaptive Audio and Transparency mode",
-        icon: `${CDN_CONTRAST}/icon_noisecontrol__ezloyxzt4d2u_large.png`,
+        icon: `${CDN_CONTRAST}/contrast_icon_group__f8aob849c2i6_large.png`,
         alt: "Adaptive Audio",
       },
       {
         label: "Personalised Spatial Audio",
-        icon: `${CDN_CONTRAST}/icon_person_spatialaudio__csfr1qmr43aa_large.png`,
+        icon: `${CDN_CONTRAST}/person_spatialaudio__cabm1tfxfz9e_large.png`,
         alt: "Personalised Spatial Audio",
       },
       {
         label: "H2 chip",
-        icon: `${CDN_CONTRAST}/icon_chip_h2__ej2dk6a2bouq_large.png`,
+        icon: `${CDN_CONTRAST}/chip_h2__eu62bmbnh0wi_large.png`,
         alt: "H2 chip",
       },
       {
         label: "5 hours of listening time",
         value: "Up to 5 hours",
-        icon: `${CDN_CONTRAST}/icon_battery_100percent__ck7x0c9x6z6i_large.png`,
+        icon: `${CDN_CONTRAST}/battery_100percent__6n3pyba2z4im_large.png`,
         alt: "Battery",
       },
       {
         label: "Up to 30 hours total with case",
-        icon: `${CDN_CONTRAST}/icon_battery_100percent__ck7x0c9x6z6i_large.png`,
+        icon: `${CDN_CONTRAST}/battery_100percent__6n3pyba2z4im_large.png`,
         alt: "Total battery with case",
       },
       {
         label: "Charging case",
-        icon: `${CDN_CONTRAST}/icon_airpods_4_chargingcase__dh0m6ot0s9ia_large.png`,
+        icon: `${CDN_CONTRAST}/airpods_4_chargingcase__c4fwrkdadb42_large.png`,
         alt: "Charging case",
       },
       {
         label: "Water resistant",
-        icon: `${CDN_CONTRAST}/icon_drop__bbsjzeali8uq_large.png`,
+        icon: `${CDN_CONTRAST}/drop__d6cji0kw3xg2_large.png`,
         alt: "Water resistant",
       },
     ],
@@ -133,6 +133,7 @@ function ProductCard({ product, index }: { product: ProductTile; index: number }
             alt={product.alt}
             fill
             className="object-contain p-6"
+            style={{ width: "auto", height: "auto" }}
             sizes="(max-width: 734px) 100vw, 50vw"
           />
         </div>
@@ -171,6 +172,7 @@ function ProductCard({ product, index }: { product: ProductTile; index: number }
                       width={20}
                       height={20}
                       className="object-contain"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   ) : null}
                 </span>
