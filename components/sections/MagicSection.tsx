@@ -5,36 +5,27 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/animation/ScrollReveal";
 import { StaggeredFadeIn } from "@/components/animation/StaggeredFadeIn";
+import { magic } from "@/lib/images";
 
 const VIDEO_URL =
   "https://www.apple.com/105/media/in/airpods-4/2024/62a51629-9227-413a-98ae-ba9e09984c00/films/feature/airpods-4-feature-tpl-in-2024_16x9.m3u8";
 
-const CONNECT_ENDFRAME =
-  "https://www.apple.com/v/airpods-4/g/images/overview/stories/airpods-connect_endframe__eyakc5xs2ei6_large.png";
 
-const MAGIC_DETECTION =
-  "https://www.apple.com/v/airpods-4/g/images/overview/stories/magic_detection__eye833zljbqu_large.jpg";
-
-const MAGIC_FIND_MY =
-  "https://www.apple.com/v/airpods-4/g/images/overview/stories/magic_find_my__bh83ouli1x4y_large.jpg";
-
-const MAGIC_LISTEN =
-  "https://www.apple.com/v/airpods-4/g/images/overview/stories/magic_listen__bfukhz82rzea_large.jpg";
 
 const cards = [
   {
     title: "Detection",
     heading: "A great sense of detection.",
     body: "AirPods 4 give you a seamless listening experience across iPhone, Apple Watch, iPad, Mac and Apple TV.",
-    image: MAGIC_DETECTION,
-    alt: "AirPods 4 detection illustration",
+    image: magic.detection.src,
+    alt: magic.detection.alt,
   },
   {
     title: "Find My",
     heading: "Find My finds more.",
     body: "Track down your AirPods 4 with the Find My app.",
-    image: MAGIC_FIND_MY,
-    alt: "Find My app tracking AirPods 4",
+    image: magic.findMy.src,
+    alt: magic.findMy.alt,
   },
   {
     title: "Siri Interactions",
@@ -48,8 +39,8 @@ const cards = [
     title: "Listen Together",
     heading: "Listen together.",
     body: "Easily share a song or show between any two sets of AirPods.",
-    image: MAGIC_LISTEN,
-    alt: "Two pairs of AirPods sharing audio",
+    image: magic.listen.src,
+    alt: magic.listen.alt,
   },
 ];
 
@@ -85,7 +76,7 @@ function VideoPlayer() {
       >
         {showPoster && (
           <Image
-            src={CONNECT_ENDFRAME}
+            src={magic.connect.src}
             alt="AirPods 4 pairing"
             fill
             className="object-cover"

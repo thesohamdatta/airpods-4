@@ -3,13 +3,8 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-
-const CASE_IMAGE =
-  "https://www.apple.com/v/airpods-4/g/images/overview/stories/battery_case__ey8pezx7mb6u_large.png";
-const USB_IMAGE =
-  "https://www.apple.com/v/airpods-4/g/images/overview/stories/battery_usb__fmcq7sazbxm6_large.jpg";
-const WIRELESS_IMAGE =
-  "https://www.apple.com/v/airpods-4/g/images/overview/stories/battery_charger__f8vsiut6h1aq_large.jpg";
+import { battery } from "@/lib/images";
+import { EASING } from "@/lib/easing";
 
 const ECHO_TEXT = "Charges fast. And lasts";
 
@@ -34,7 +29,7 @@ function EchoText() {
             viewport={{ once: true }}
             transition={{
               duration: 0.8,
-              ease: [0.23, 1, 0.32, 1],
+              ease: EASING.appleReveal,
               delay: i * 0.06,
             }}
           >
@@ -62,7 +57,7 @@ function StatCard({
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+      transition={{ duration: 0.6, ease: EASING.appleReveal }}
     >
       <span
         className="text-[48px] font-semibold leading-tight"
@@ -95,7 +90,7 @@ function ChargeCard({
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+      transition={{ duration: 0.6, ease: EASING.appleReveal }}
     >
       <Image
         src={image}
@@ -138,7 +133,7 @@ export function BatterySection() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+          transition={{ duration: 0.6, ease: EASING.appleReveal }}
         >
           Battery
         </motion.span>
@@ -153,7 +148,7 @@ export function BatterySection() {
         >
           <motion.div style={{ scale: caseScale }} className="relative w-full h-full">
             <Image
-              src={CASE_IMAGE}
+              src={battery.case.src}
               alt="AirPods 4 charging case"
               fill
               className="object-contain"
@@ -179,8 +174,8 @@ export function BatterySection() {
         </div>
 
         <div className="mt-20 w-full max-w-[980px] grid grid-cols-1 md:grid-cols-2 gap-6 pb-[var(--section-padding)]">
-          <ChargeCard title="Easy as USB-C." image={USB_IMAGE} />
-          <ChargeCard title="Wireless options." image={WIRELESS_IMAGE} />
+          <ChargeCard title="Easy as USB-C." image={battery.usb.src} />
+          <ChargeCard title="Wireless options." image={battery.wireless.src} />
         </div>
       </div>
     </section>

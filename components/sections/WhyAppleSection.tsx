@@ -5,9 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/animation/ScrollReveal";
 import { StaggeredFadeIn } from "@/components/animation/StaggeredFadeIn";
-
-const CDN_ICON = "https://www.apple.com/v/airpods-4/g/images/overview/icon-card";
-const CDN_ICON_IN = "https://www.apple.com/v/airpods-4/g/images/overview/icon-card";
+import { iconCard } from "@/lib/images";
 
 interface CardData {
   title: string;
@@ -24,40 +22,40 @@ const cards: CardData[] = [
     heading: "Personalise your AirPods for free.",
     body: "Add a personal touch with free engraving.",
     detail: "Make your AirPods unmistakably yours with a personalised engraving. Choose from a range of emoji, text and number combinations to create a look that&rsquo;s uniquely you. Available exclusively at Apple.",
-    icon: `${CDN_ICON}/icon_emoji_face_grinning__cua3l9d18as2_large.png`,
-    alt: "Emoji face grinning",
+    icon: iconCard.emoji.src,
+    alt: iconCard.emoji.alt,
   },
   {
     title: "Payment",
     heading: "Monthly payment options available.",
     body: "Pay in monthly instalments with Apple Card.",
     detail: "With Apple Card, you can pay for your AirPods over time, interest-free. Choose from flexible monthly payment options that fit your budget. See what you qualify for with no impact on your credit score.",
-    icon: `${CDN_ICON_IN}/icon_applecard__fjhjbuy2hwae_large.png`,
-    alt: "Apple Card",
+    icon: iconCard.appleCard.src,
+    alt: iconCard.appleCard.alt,
   },
   {
     title: "Delivery",
     heading: "Get flexible delivery and easy pickup.",
     body: "Choose delivery or pickup options that work for you.",
     detail: "Enjoy free delivery on all AirPods orders. Choose convenient delivery windows that fit your schedule, or select Express Pickup at your nearest Apple Store. We&rsquo;ll have your order ready when you arrive.",
-    icon: `${CDN_ICON}/icon_truck_box__blkgu1iu59ea_large.png`,
-    alt: "Delivery truck",
+    icon: iconCard.truck.src,
+    alt: iconCard.truck.alt,
   },
   {
     title: "Specialist",
     heading: "Shop with a Specialist.",
     body: "Get expert advice from an Apple Specialist.",
     detail: "Have questions about AirPods? Talk to an Apple Specialist online or in store. They can help you compare models, find the perfect fit, and set up your new AirPods so you can start enjoying them right away.",
-    icon: `${CDN_ICON}/icon_message_and_message__b00c2to00mz6_large.png`,
-    alt: "Message bubble",
+    icon: iconCard.message.src,
+    alt: iconCard.message.alt,
   },
   {
     title: "Apple Store App",
     heading: "Explore a shopping experience designed around you.",
     body: "Download the Apple Store app for a personalised experience.",
     detail: "The Apple Store app puts the power of Apple in your pocket. Get personalised recommendations, compare products, check trade-in values, and track your orders — all from one place. Download today.",
-    icon: `${CDN_ICON}/icon_app_applestore__dm9p2yl2q9w2_large.png`,
-    alt: "Apple Store app icon",
+    icon: iconCard.appStore.src,
+    alt: iconCard.appStore.alt,
   },
 ];
 

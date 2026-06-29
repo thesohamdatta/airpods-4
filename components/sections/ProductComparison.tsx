@@ -4,14 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/animation/ScrollReveal";
 import { StaggeredFadeIn } from "@/components/animation/StaggeredFadeIn";
-
-const CDN_CONTRAST = "https://www.apple.com/v/airpods-4/g/images/overview/contrast";
-
-const AIRPODS_4_CLOSED =
-  "https://www.apple.com/v/airpods-4/g/images/overview/contrast/explore_airpods_4_closed__dgo55jp7r7gy_xlarge.jpg";
-
-const AIRPODS_4_OPENED =
-  "https://www.apple.com/v/airpods-4/g/images/overview/contrast/explore_airpods_4_opened__d1lvsgfc59me_xlarge.jpg";
+import { contrast } from "@/lib/images";
+import { EASING } from "@/lib/easing";
 
 interface Feature {
   label: string;
@@ -34,90 +28,90 @@ const products: ProductTile[] = [
   {
     name: "AirPods 4",
     badge: "Currently viewing: AirPods 4",
-    image: AIRPODS_4_CLOSED,
-    alt: "AirPods 4 charging case closed",
+    image: contrast.airpods4Closed.src,
+    alt: contrast.airpods4Closed.alt,
     features: [
       { label: "Active Noise Cancellation", dash: true },
       { label: "Adaptive Audio", dash: true },
       {
         label: "Personalised Spatial Audio",
-        icon: `${CDN_CONTRAST}/person_spatialaudio__cabm1tfxfz9e_large.png`,
-        alt: "Personalised Spatial Audio",
+        icon: contrast.spatialAudio.src,
+        alt: contrast.spatialAudio.alt,
       },
       {
         label: "H2 chip",
-        icon: `${CDN_CONTRAST}/chip_h2__eu62bmbnh0wi_large.png`,
-        alt: "H2 chip",
+        icon: contrast.h2Chip.src,
+        alt: contrast.h2Chip.alt,
       },
       {
         label: "5 hours of listening time",
         value: "Up to 5 hours",
-        icon: `${CDN_CONTRAST}/battery_100percent__6n3pyba2z4im_large.png`,
-        alt: "Battery",
+        icon: contrast.batteryFull.src,
+        alt: contrast.batteryFull.alt,
       },
       {
         label: "Up to 30 hours total with case",
-        icon: `${CDN_CONTRAST}/battery_100percent__6n3pyba2z4im_large.png`,
+        icon: contrast.batteryFull.src,
         alt: "Total battery with case",
       },
       {
         label: "Charging case",
-        icon: `${CDN_CONTRAST}/airpods_4_chargingcase__c4fwrkdadb42_large.png`,
-        alt: "Charging case",
+        icon: contrast.chargingCase.src,
+        alt: contrast.chargingCase.alt,
       },
       {
         label: "Water resistant",
-        icon: `${CDN_CONTRAST}/drop__d6cji0kw3xg2_large.png`,
-        alt: "Water resistant",
+        icon: contrast.waterDrop.src,
+        alt: contrast.waterDrop.alt,
       },
     ],
   },
   {
     name: "AirPods 4 with Active Noise Cancellation",
-    image: AIRPODS_4_OPENED,
-    alt: "AirPods 4 with ANC out of case",
+    image: contrast.airpods4Opened.src,
+    alt: contrast.airpods4Opened.alt,
     buy: true,
     features: [
       {
         label: "Active Noise Cancellation",
-        icon: `${CDN_CONTRAST}/contrast_icon_group__f8aob849c2i6_large.png`,
+        icon: contrast.noiseGroup.src,
         alt: "Noise control",
       },
       {
         label: "Adaptive Audio and Transparency mode",
-        icon: `${CDN_CONTRAST}/contrast_icon_group__f8aob849c2i6_large.png`,
+        icon: contrast.noiseGroup.src,
         alt: "Adaptive Audio",
       },
       {
         label: "Personalised Spatial Audio",
-        icon: `${CDN_CONTRAST}/person_spatialaudio__cabm1tfxfz9e_large.png`,
-        alt: "Personalised Spatial Audio",
+        icon: contrast.spatialAudio.src,
+        alt: contrast.spatialAudio.alt,
       },
       {
         label: "H2 chip",
-        icon: `${CDN_CONTRAST}/chip_h2__eu62bmbnh0wi_large.png`,
-        alt: "H2 chip",
+        icon: contrast.h2Chip.src,
+        alt: contrast.h2Chip.alt,
       },
       {
         label: "5 hours of listening time",
         value: "Up to 5 hours",
-        icon: `${CDN_CONTRAST}/battery_100percent__6n3pyba2z4im_large.png`,
-        alt: "Battery",
+        icon: contrast.batteryFull.src,
+        alt: contrast.batteryFull.alt,
       },
       {
         label: "Up to 30 hours total with case",
-        icon: `${CDN_CONTRAST}/battery_100percent__6n3pyba2z4im_large.png`,
+        icon: contrast.batteryFull.src,
         alt: "Total battery with case",
       },
       {
         label: "Charging case",
-        icon: `${CDN_CONTRAST}/airpods_4_chargingcase__c4fwrkdadb42_large.png`,
-        alt: "Charging case",
+        icon: contrast.chargingCase.src,
+        alt: contrast.chargingCase.alt,
       },
       {
         label: "Water resistant",
-        icon: `${CDN_CONTRAST}/drop__d6cji0kw3xg2_large.png`,
-        alt: "Water resistant",
+        icon: contrast.waterDrop.src,
+        alt: contrast.waterDrop.alt,
       },
     ],
   },
@@ -228,7 +222,7 @@ export function ProductComparison() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1], delay: 0.3 }}
+          transition={{ duration: 0.6, ease: EASING.appleReveal, delay: 0.3 }}
         >
           <a
             href="https://www.apple.com/in/airpods/compare/"

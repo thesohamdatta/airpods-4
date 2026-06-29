@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { MotionConfig } from "framer-motion";
 import { SmoothScrollProvider } from "@/components/layout/SmoothScrollProvider";
-import { AnimationProvider } from "@/components/animation/AnimationProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,9 +28,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <SmoothScrollProvider>
-          <AnimationProvider>
+          <MotionConfig reducedMotion="user">
             {children}
-          </AnimationProvider>
+          </MotionConfig>
         </SmoothScrollProvider>
       </body>
     </html>

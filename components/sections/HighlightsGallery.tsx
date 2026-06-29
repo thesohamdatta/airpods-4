@@ -4,6 +4,7 @@ import { useRef, useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { StaggeredFadeIn } from "@/components/animation/StaggeredFadeIn";
+import { highlights } from "@/lib/images";
 
 interface MediaCard {
   id: string;
@@ -16,32 +17,27 @@ interface MediaCard {
 const cards: MediaCard[] = [
   {
     id: "anc",
-    image:
-      "https://www.apple.com/v/airpods-4/g/images/overview/media-card/media_lifestyle__cyk4qt05xic2_large.jpg",
+    image: highlights.lifestyle.src,
     caption:
       "AirPods 4 with Active Noise Cancellation also available — a first for this design.",
   },
   {
     id: "translation",
-    image:
-      "https://www.apple.com/v/airpods-4/g/images/overview/media-card/media_live_translation__epwy7gl2k7ee_large.jpg",
+    image: highlights.liveTranslation.src,
     caption:
       "Live Translation helps you communicate across languages.",
   },
   {
     id: "chip",
-    image:
-      "https://www.apple.com/v/airpods-4/g/images/overview/media-card/chip_endframe__eknnhv3wqlyu_large.jpg",
-    poster:
-      "https://www.apple.com/v/airpods-4/g/images/overview/media-card/chip_startframe__dplqqnj2n1si_large.jpg",
+    image: highlights.chipEnd.src,
+    poster: highlights.chipStart.src,
     caption:
       "Clearer calls with Voice Isolation and a hands-free way to interact with Siri.",
     align: "bottom-center",
   },
   {
     id: "charging",
-    image:
-      "https://www.apple.com/v/airpods-4/g/images/overview/media-card/media_charging__csr8q6rfe4sy_large.jpg",
+    image: highlights.charging.src,
     caption:
       "Power up with USB\u2011C, an Apple Watch charger or a Qi\u2011certified charger.",
   },

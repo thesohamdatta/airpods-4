@@ -5,16 +5,12 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
+import { wearability } from "@/lib/images";
+import { EASING } from "@/lib/easing";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const IMAGES = {
-  hero: "https://www.apple.com/v/airpods-4/g/images/overview/stories/design_airpods_outside__de500neaukgi_large.jpg",
-  inside:
-    "https://www.apple.com/v/airpods-4/g/images/overview/stories/design_airpods_inside__exv05zud5866_large.jpg",
-  stem: "https://www.apple.com/v/airpods-4/g/images/overview/stories/design_airpods_stem__ca26r79ta9f6_large.jpg",
-  pair: "https://www.apple.com/v/airpods-4/g/images/overview/stories/design_airpods_pair__c4zc76vxva82_large.jpg",
-};
+const IMAGES = wearability;
 
 function PinLine({ className }: { className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -113,7 +109,7 @@ export function WearabilitySection() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+            transition={{ duration: 0.6, ease: EASING.appleReveal }}
           >
             Wearability
           </motion.span>
@@ -133,7 +129,7 @@ export function WearabilitySection() {
           <div className="relative mt-12 w-full max-w-[980px]">
             <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
               <Image
-                src={IMAGES.hero}
+                src={IMAGES.hero.src}
                 alt="AirPods 4 back view"
                 fill
                 className="object-cover"
@@ -142,7 +138,7 @@ export function WearabilitySection() {
             </div>
 
             <div className="mt-8 grid grid-cols-3 gap-4">
-              {[IMAGES.inside, IMAGES.stem, IMAGES.pair].map((src, i) => (
+              {[IMAGES.inside.src, IMAGES.stem.src, IMAGES.pair.src].map((src, i) => (
                 <div
                   key={i}
                   className="relative aspect-[4/3] overflow-hidden rounded-xl"

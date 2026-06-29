@@ -7,34 +7,33 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { EASING, DURATION } from "@/lib/easing";
-
-const CDN = "https://www.apple.com/v/airpods-4/g/images/overview/stories";
+import { audio } from "@/lib/images";
 
 const CARDS = [
   {
     title: "H2 Chip",
     text: "A roaring leap in capabilities. The powerful H2 chip comes to AirPods 4, making audio and calls sound better than ever.",
-    image: `${CDN}/audio_h2__7lchtwyfpnmi_large.jpg`,
+    image: audio.h2.src,
   },
   {
     title: "Voice Isolation",
     text: "Hang on every word. Using advanced computational audio, Voice Isolation minimises background noise while clarifying the sound of your voice.",
-    image: `${CDN}/audio_voice__fsh5v6wchyqa_large.jpg`,
+    image: audio.voice.src,
   },
   {
     title: "Acoustic Architecture",
     text: "Enjoy every note, beat and vibe. The acoustic architecture uses an Apple-designed low-distortion driver powered by a custom high dynamic range amplifier.",
-    image: `${CDN}/audio_airpod__fxaq33c1a7iy_large.jpg`,
+    image: audio.acoustic.src,
   },
   {
     title: "Adaptive EQ",
     text: "Calibrates music to your ears. Adaptive EQ automatically tunes music to your ears. Inward-facing microphones detect what you're hearing, then adjust low- and mid-range frequencies.",
-    image: `${CDN}/audio_music__codaubhynsr6_large.jpg`,
+    image: audio.eq.src,
   },
   {
     title: "FaceTime",
     text: "Real talk in real time. Connect on FaceTime in crisp, HD quality with an AAC-ELD speech codec.",
-    image: `${CDN}/audio_facetime__cd84uowabys2_large.jpg`,
+    image: audio.spatial.src,
   },
 ];
 
@@ -123,8 +122,8 @@ export function AudioPerformance() {
       >
         <div className="w-full md:w-1/2 h-full relative">
           <Image
-            src={`${CDN}/audio_hero__e2s9qjrif1iu_xlarge.png`}
-            alt="Person wearing AirPods 4"
+            src={audio.hero.src}
+            alt={audio.hero.alt}
             fill
             className="object-cover"
             priority
@@ -166,15 +165,15 @@ export function AudioPerformance() {
           </h2>
         </div>
 
-        <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden mb-8">
-          <Image
-            src={`${CDN}/audio_hero__e2s9qjrif1iu_xlarge.png`}
-            alt="Person wearing AirPods 4"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-        </div>
+          <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden mb-8">
+            <Image
+              src={audio.hero.src}
+              alt={audio.hero.alt}
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
 
         {CARDS.map((card, i) => (
           <motion.div

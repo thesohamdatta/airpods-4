@@ -4,25 +4,23 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { EASING, DURATION } from "@/lib/easing";
-
-const CDN = "https://www.apple.com/v/airpods-4/g/images/overview/stories";
-const CDN_CONTRAST = "https://www.apple.com/v/airpods-4/g/images/overview/contrast";
+import { noise } from "@/lib/images";
 
 const FEATURES = [
   {
     title: "Adaptive Audio",
     text: "Blends Transparency and Active Noise Cancellation in real time, seamlessly tailoring noise control to your changing environment.",
-    icon: `${CDN_CONTRAST}/noise_icon_adaptive__eh8sgult7gae_large.png`,
+    icon: noise.adaptive.src,
   },
   {
     title: "Transparency mode",
     text: "Provides the most natural way to hear the world around you — perfect for staying connected to your surroundings.",
-    icon: `${CDN_CONTRAST}/noise_icon_transparency__buvnzqmv27ci_large.png`,
+    icon: noise.transparency.src,
   },
   {
     title: "Conversation Awareness",
     text: "Senses when you're speaking to someone nearby and automatically lowers the volume of what's playing.",
-    icon: `${CDN_CONTRAST}/noise_icon_conversation__ez1oxr48lac2_large.png`,
+    icon: noise.conversation.src,
   },
 ];
 
@@ -75,7 +73,7 @@ export function ANCSection() {
     >
       <div className="relative h-[90vh] min-h-[600px] flex items-center justify-center">
         <Image
-          src={`${CDN}/noise_hero__rhegsu0w6iiy_xlarge.jpg`}
+          src={noise.hero.src}
           alt="Active Noise Cancellation"
           fill
           className="object-cover"

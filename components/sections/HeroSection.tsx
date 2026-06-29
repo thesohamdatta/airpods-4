@@ -4,11 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { EASING, DURATION } from "@/lib/easing";
-
-const HERO_IMAGE =
-  "https://www.apple.com/v/airpods-4/g/images/overview/welcome/hero__1z1ep1te3eq2_xlarge.jpg";
-const AIRPODS_STARTFRAME =
-  "https://www.apple.com/v/airpods-4/g/images/overview/welcome/hero-airpods_startframe__qxv9xy7swkqm_xlarge.jpg";
+import { hero } from "@/lib/images";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -176,7 +172,7 @@ export function HeroSection() {
       >
         <div className="absolute inset-0">
           <Image
-            src={HERO_IMAGE}
+            src={hero.primary.src}
             alt="A person dancing while wearing AirPods 4"
             fill
             className="object-cover"

@@ -4,6 +4,7 @@ import { useRef, useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { StaggeredFadeIn } from "@/components/animation/StaggeredFadeIn";
+import { bento } from "@/lib/images";
 
 interface Slide {
   id: string;
@@ -14,49 +15,27 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: "case-open",
-    images: [
-      {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_case_open__63kccmu775u6_large.jpg",
-        alt: "AirPods 4 case open",
-      },
-    ],
+    images: [{ src: bento.caseOpen.src, alt: bento.caseOpen.alt }],
     layout: "single",
   },
   {
     id: "stem",
     images: [
-      {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_stem__cfztc9z01vpy_large.jpg",
-        alt: "AirPods 4 stem detail",
-      },
-      {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_closeup__nvqogkmqz4ae_large.jpg",
-        alt: "AirPods 4 closeup",
-      },
+      { src: bento.stem.src, alt: bento.stem.alt },
+      { src: bento.closeup.src, alt: bento.closeup.alt },
     ],
     layout: "split",
   },
   {
     id: "case-closed",
-    images: [
-      {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_case_close__f0fhueeeoy2q_large.jpg",
-        alt: "AirPods 4 case closed",
-      },
-    ],
+    images: [{ src: bento.caseClose.src, alt: bento.caseClose.alt }],
     layout: "single",
   },
   {
     id: "side",
     images: [
-      {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_side__edtf67wfg10m_large.jpg",
-        alt: "AirPods 4 side view",
-      },
-      {
-        src: "https://www.apple.com/v/airpods-4/g/images/overview/bento-gallery/bento_angle__b2i7xnzp5h7m_large.jpg",
-        alt: "AirPods 4 angle view",
-      },
+      { src: bento.side.src, alt: bento.side.alt },
+      { src: bento.angle.src, alt: bento.angle.alt },
     ],
     layout: "split",
   },
